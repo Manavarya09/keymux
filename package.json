@@ -1,0 +1,13 @@
+{
+  "name": "keymux",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": ["apps/*","desktop","packages/*"],
+  "scripts": {
+    "dev": "pnpm -w -s -C desktop dev",
+    "build": "pnpm -w -s -C desktop build && cargo build --workspace",
+    "test": "pnpm -w -s -C packages/sdk test && cargo test --workspace",
+    "bootstrap": "pnpm -w install"
+  },
+  "license": "MIT"
+}
